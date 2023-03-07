@@ -1,0 +1,15 @@
+[submodule "projects/2022S2/Trabalho-Final-MicMic"]
+	path = projects/2022S2/Trabalho-Final-MicMic
+	url = https://github.com/alestrab/Trabalho-Final-MicMic
+[submodule "projects/2022S2/projeto_arduino"]
+	path = projects/2022S2/projeto_arduino
+	url = https://github.com/jacbaudet/projeto_arduino
+[submodule "projects/2022S2/TrabalhoMicMic"]
+	path = projects/2022S2/TrabalhoMicMic
+	url = https://github.com/pedrohfumoto/TrabalhoMicMic
+[submodule "projects/2022S2/MicMic-Trabalho_Final"]
+	path = projects/2022S2/MicMic-Trabalho_Final
+	url = https://github.com/LucasGB11/MicMic-Trabalho_Final/
+[submodule "projects/2022S2/TrenaDigital"]
+	path = projects/2022S2/TrenaDigital
+	url = https://github.com/vitorsbarboza/TrenaDigital
