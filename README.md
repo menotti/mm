@@ -33,3 +33,4 @@ Horas | Tópico       | Semana | Slides
 8	| Plataformas e sistemas          | 12a e 13a | [[10](slides/10_pio.pdf)]
 8	| Aplicações                      | 14a e 15a | 
 
+## [Playlist das aulas no YouTube](https://www.youtube.com/playlist?list=PLhaFCmjMNuYai_WZDwHKZ4Zshx0tT6GoE)
