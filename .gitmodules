@@ -13,3 +13,6 @@
 [submodule "projects/2022S2/TrenaDigital"]
 	path = projects/2022S2/TrenaDigital
 	url = https://github.com/vitorsbarboza/TrenaDigital
+[submodule "sim/getting-started-asm"]
+	path = sim/getting-started-asm
+	url = git@github.com:DC-UFSCar/getting-started-asm.git

@@ -1,5 +1,6 @@
 # [Microprocessadores e Microcontroladores (27146)](slides/00_plano.pdf)
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/menotti/mm)
 ## OBJETIVOS GERAIS 
 
 Fornecer aos alunos os conceitos básicos sobre a arquitetura de microprocessadores, microcontroladores, e os aspectos ligados ao  projeto de sistemas que utilizam esses elementos, utilizando desde o desenvolvimento base e a utilização de kits prontos até a utilização do placas comerciais.
@@ -33,4 +34,9 @@ Horas | Tópico       | Semana | Slides
 8	| Plataformas e sistemas          | 12a e 13a | [[10](slides/10_pio.pdf)]
 8	| Aplicações                      | 14a e 15a | 
 
-## [Playlist das aulas no YouTube](https://www.youtube.com/playlist?list=PLhaFCmjMNuYai_WZDwHKZ4Zshx0tT6GoE)
+## [Playlist das aulas no YouTube (2021)](https://www.youtube.com/playlist?list=PLhaFCmjMNuYai_WZDwHKZ4Zshx0tT6GoE)
+
+## REFERÊNCIAS 
+
+
+
