@@ -16,3 +16,6 @@
 [submodule "sim/getting-started-asm"]
 	path = sim/getting-started-asm
 	url = git@github.com:DC-UFSCar/getting-started-asm.git
+[submodule "sim/register-memory"]
+	path = sim/register-memory
+	url = git@github.com:DC-UFSCar/register-memory.git
