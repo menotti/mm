@@ -16,7 +16,7 @@ type %BOARDFILE% >> project.qsf
 %QUARTUS_PATH%quartus_map.exe %QUARTUS_ARGS% --read_settings_files=on --source=%SRCS% project
 if  errorlevel 1 goto ERROR
 
-%QUARTUS_PATH%quartus_fit.exe %QUARTUS_ARGS% --part=%PART% --read_settings_files=on project
+%QUARTUS_PATH%quartus_fit.exe %QUARTUS_ARGS% --part=%PART% --effort=fast --one_fit_attempt=on --read_settings_files=on project
 if  errorlevel 1 goto ERROR
 
 %QUARTUS_PATH%quartus_asm.exe %QUARTUS_ARGS% project
@@ -34,5 +34,6 @@ goto EOF
 :ERROR
 echo FAILED!
 exit /b 1
+
 
 :EOF
