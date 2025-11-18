@@ -1,5 +1,5 @@
 {
-  "postCreateCommand": "sudo apt update && sudo apt install -y iverilog gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu qemu-user qemu-user-static",
+  "postCreateCommand": "sudo apt update && sudo apt install -y iverilog gcc-riscv64-unknown-elf gcc-riscv64-linux-gnu binutils-riscv64-unknown-elf binutils-riscv64-linux-gnu qemu-user qemu-user-static",
   "customizations": {
     "vscode": {
       "extensions": [
