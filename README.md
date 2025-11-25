@@ -1,5 +1,9 @@
 # [Home](https://menotti.pro.br/mm)
 
+## Microprocessadores e Microcontroladores
+
+### Curso de Microprocessadores e Microcontroladores usando RISC-V e Verilog
+
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/menotti/mm)
 
 ## [Plano de Ensino](slides/00_plano.pdf)
@@ -44,4 +48,4 @@ Horas | Tópico       | Semana | Slides
 - http://www.riscbook.com/portuguese/
 - https://riscv-programming.org/
 - https://www.riscvschool.com/
-
+- https://menotti.pro.br/aoc/
