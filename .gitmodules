@@ -19,3 +19,12 @@
 [submodule "sim/05-riscv-alu"]
 	path = sim/05-riscv-alu
 	url = git@github.com:DC-UFSCar/riscv-alu
+[submodule "sim/06-riscv-mono"]
+	path = sim/06-riscv-mono
+	url = git@github.com:DC-UFSCar/riscv-mono
+[submodule "sim/07-riscv-multi"]
+	path = sim/07-riscv-multi
+	url = git@github.com:DC-UFSCar/riscv-multi
+[submodule "sim/08-riscv-pipeline"]
+	path = sim/08-riscv-pipeline
+	url = git@github.com:DC-UFSCar/riscv-pipeline
