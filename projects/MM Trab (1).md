@@ -70,7 +70,6 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Há também um comando para ver as modificações, que pode ser aplicado ao repositório todo ou a um ou mais arquivos selecionados na linha de comando. No exemplo a seguir foi adicionada a instrução `SUB` ao nosso processador. Como ela já estava presente no montador, ela foi removida apenas para fins didáticos:
 
-`~/up1$ git diff`
 ```diff
 ~/up1$ git diff
 diff --git a/assembler/tables.py b/assembler/tables.py
