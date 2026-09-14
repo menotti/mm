@@ -93,7 +93,7 @@ diff --git a/processor/cpu.sv b/processor/cpu.sv
 
 ### 4.2. Processador uP1'
 
-![Processador uP1' (8 bits)](uP1.png)
+![Processador uP1' (8 bits)](figs/uP1.png)
 Figura 1: Processador uP1' (8 bits) [^1]
 
 O processador uP1' foi construído para fins didáticos. Portanto, ele tem intencionalmente poucas instruções e alguns espaços vazios tanto no endereçamento de memória quanto nos *opcodes* de instruções. O único registrador de propósito geral é o acumulador (`ACC`), que é usado como destino/origem das instruções `LOAD`/`STORE`, respectivamente. Ele também é usado como operando e destino da instrução `ADD`. Os demais registradores têm propósito específico:
@@ -138,7 +138,7 @@ Note que a instrução `JUMP` possui um formato diferente, com apenas um bit de 
 
 ### 4.3. Simulador EDA Playground
 
-![](EdaPlay.png)
+![](figs/EdaPlay.png)
 
 Para simular o funcionamento do processador, vamos usar uma interface web que permite interagir com diversos simuladores profissionais e acadêmicos. Na interface do EDA Playground, observe os seguintes detalhes:
 

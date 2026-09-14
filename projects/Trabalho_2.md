@@ -39,7 +39,7 @@ Uma forma bastante comum de implementar a interface com periféricos é por meio
 
 É possível usar suporte de *hardware* para fazer isso, conforme a Figura 1. Neste exemplo, um decodificador de endereços é usado para: (i) acionar os sinais de escrita nos diversos dispositivos; (ii) selecionar a saída do dispositivo, direcionando-a para o processador.
 
-![MMIO](mmio.png)
+![MMIO](figs/mmio.png)
 Figura 1: Suporte de hardware para entrada e saída mapeada em memória [^1]
 
 Suponha que o primeiro dispositivo de entrada/saída (*I/O Device 1*) esteja associado ao endereço de memória `0x20001000`. O código assembly do RISC-V para enviar o valor `7` ao dispositivo poderia ser:
@@ -70,7 +70,7 @@ O decodificador de endereço configura `RDsel1:0` para `01`, porque detecta o en
 
 No simulador emulsiV é possível visualizar detalhadamente a execução de uma instrução observando os valores no caminho dos dados (*datapath*) do processador. Suas funcionalidades principais são listadas a seguir, confome numeração na Figura 2:
 
-![Simulador emulsiv](eseo.png)
+![Simulador emulsiv](figs/eseo.png)
 Figura 2: Simulador emulsiV [^2]
 
 1. **Barra de comandos**, respectivamente:
@@ -168,15 +168,18 @@ Para realização deste trabalho, o grupo deverá implementar obrigatoriamente n
 1. **(obrigatório)** Implementar um programa para inverter uma string informada pelo usuário;
 2. **(obrigatório)** Implementar um programa para converter para maiúsculas uma string informada pelo usuário;
 3. Implementar um programa para detectar se uma string é palíndroma, ignorando espaços, caracteres especiais e maiúsculas/minúsculas. Por exemplo, a frase a seguir deve ser aceita: “Socorram-me, subi no onibus em Marrocos”;
-4. Implementar um programa (opcional, item 3 em diante) de processamento de imagens do trabalho anterior (ARM);
+4. Implementar um programa (opcional, item 3 em diante) de processamento de imagens do [trabalho seguinte (ARM)](Trabalho_3.md);
 5. Implementar um jogo simples, como adivinhar um número, jogo da velha ou forca;
-6. Pesquisar as *calling conventions* no RISC-V e implementar um programa que faça uso de *stack frame*;
+6. Pesquisar as *calling conventions* no RISC-V e implementar um programa que faça uso de *stack frame* na pilha;
 7. Simular qualquer um desses programas no Processador RISC-V em Verilog (incompleto). Pode ser preciso completar as instruções faltantes.
+8. Implementar um contador binário controlado por GPIO: cada acionamento de um *push button* deve incrementar o contador e o estado dos bits deve ser exibido nos LEDs. O programa deve permitir zerar o contador usando outro botão ou *switch*;
+9. Implementar uma aplicação gráfica no display Bitmap, como um desenho interativo, labirinto ou jogo de movimentação. A aplicação deve receber comandos por GPIO ou entrada de texto e atualizar apenas as regiões necessárias da tela;
+10. Implementar um cronômetro ou jogo de reação utilizando o Timer e algum dispositivo de saída. O programa deve medir o intervalo entre um evento de entrada, como o acionamento de um botão, e a resposta do usuário, exibindo o resultado por texto, GPIO ou Bitmap.
 
 ## Referências Bibliográficas
 
 [^1]: [Digital Design and Computer Architecture](https://www.elsevier.com/books/digital-design-and-computer-architecture/harris/978-0-12-800056-4)
-[^2]: [Documentação do RISC-V no emulsiV](http://tice.sea.eseo.fr/riscv/doc/)
+[^2]: [Documentação do emulsiV](https://eseo-tech.github.io/emulsiV/doc)
 [^3]: [RARS](https://github.com/TheThirdOne/rars)
-[^4]: [lightriscv](https://github.com/menotti/lightriscv)
+[^4]: [LightRISCV](https://github.com/menotti/lightriscv)
 
