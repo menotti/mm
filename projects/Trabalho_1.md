@@ -1,5 +1,3 @@
-# Microprocessadores e Microcontroladores (27146)
-
 # Trabalho Nº 1
 
 ## Simulando e modificando o processador uP1' e seu montador
