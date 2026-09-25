@@ -102,7 +102,7 @@ Figura 5: Modelo de cores ARGB.
 
 ## 4.2. Compilação com GCC e execução com QEMU
 
-Além dos simuladores VisUAL e VisUAL2, é possível testar uma função ARM em conjunto com um programa C usando compilação cruzada com GCC e execução no QEMU. O exemplo disponível em [`labs/arm`](../labs/arm) converte uma imagem RGB para tons de cinza usando a função `convert_grayscale`, implementada em `convert_grayscale.arm.s`.
+Além dos simuladores VisUAL e VisUAL2, é possível testar uma função ARM em conjunto com um programa C usando compilação cruzada com GCC e execução no QEMU. O exemplo disponível em [`labs/arm`](https://github.com/menotti/mm/tree/main/labs/arm) converte uma imagem RGB para tons de cinza usando a função `convert_grayscale`, implementada em `convert_grayscale.arm.s`.
 
 A função possui a seguinte interface em C:
 
