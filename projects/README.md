@@ -18,12 +18,12 @@ A escrita do relatório deve seguir o estilo acadêmico técnico-científico. N�
 
 O relatório deve seguir o seguinte formato:
 
-- Apresentação do grupo: listar RA, nome e @conta do GitHub de todos os membros;
-- Introdução: apresentar o objetivo do trabalho e a abordagem escolhida pelo grupo;
-- Requisitos: listar o que precisa ser instalado para testar o código;
-- Procedimentos: listar as instruções necessárias para executar o trabalho; 
-- Considerações: relatar decisões tomadas, limitações, problemas encontrados, etc.; 
-- Referências: listar as referências usadas, preferencialmente com link para acesso. 
+- **Apresentação do grupo:** listar RA, nome e @conta do GitHub de todos os membros;
+- **Introdução:** apresentar o objetivo do trabalho e a abordagem escolhida pelo grupo;
+- **Requisitos:** listar o que precisa ser instalado para testar o código;
+- **Procedimentos:** listar as instruções necessárias para executar o trabalho; 
+- **Considerações:** relatar decisões tomadas, limitações, problemas encontrados, etc.; 
+- **Referências:** listar as referências usadas, preferencialmente com link para acesso. 
 
 [ˆ1]: http://www.bco.ufscar.br/servicos-informacoes/normalizacao}
 
