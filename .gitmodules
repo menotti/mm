@@ -7,27 +7,27 @@
 [submodule "sim/02-string-asm"]
 	path = sim/02-string-asm
 	url = git@github.com:DC-UFSCar/string-asm.git
-[submodule "sim/03-register-memory"]
-	path = sim/05-register-memory
-	url = git@github.com:DC-UFSCar/register-memory.git
-[submodule "sim/04-rf-test-bench"]
-	path = sim/06-rf-test-bench
-	url = git@github.com:DC-UFSCar/rf-test-bench
-[submodule "sim/05-riscv-alu"]
-	path = sim/07-riscv-alu
-	url = git@github.com:DC-UFSCar/riscv-alu
-[submodule "sim/06-riscv-mono"]
-	path = sim/08-riscv-mono
-	url = git@github.com:DC-UFSCar/riscv-mono
-[submodule "sim/07-riscv-multi"]
-	path = sim/09-riscv-multi
-	url = git@github.com:DC-UFSCar/riscv-multi
-[submodule "sim/08-riscv-pipeline"]
-	path = sim/10-riscv-pipeline
-	url = git@github.com:DC-UFSCar/riscv-pipeline
 [submodule "sim/03-string-arm"]
 	path = sim/03-string-arm
 	url = git@github.com:DC-UFSCar/string-arm.git
 [submodule "sim/04-string-x86"]
 	path = sim/04-string-x86
 	url = git@github.com:DC-UFSCar/string-x86.git
+[submodule "sim/05-register-memory"]
+	path = sim/05-register-memory
+	url = git@github.com:DC-UFSCar/register-memory.git
+[submodule "sim/06-rf-test-bench"]
+	path = sim/06-rf-test-bench
+	url = git@github.com:DC-UFSCar/rf-test-bench
+[submodule "sim/07-riscv-alu"]
+	path = sim/07-riscv-alu
+	url = git@github.com:DC-UFSCar/riscv-alu
+[submodule "sim/08-riscv-mono"]
+	path = sim/08-riscv-mono
+	url = git@github.com:DC-UFSCar/riscv-mono
+[submodule "sim/09-riscv-multi"]
+	path = sim/09-riscv-multi
+	url = git@github.com:DC-UFSCar/riscv-multi
+[submodule "sim/10-riscv-pipeline"]
+	path = sim/10-riscv-pipeline
+	url = git@github.com:DC-UFSCar/riscv-pipeline
