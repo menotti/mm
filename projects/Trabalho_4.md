@@ -4,11 +4,13 @@
 
 ## 1. Instruções Gerais
 
-- Grupos definidos no AVA;
+- Grupos definidos no AVA da disciplina;
 - Ler o documento sobre Normas para entrega dos Relatórios;
+	- Opcionalmente, o relatório pode ser escrito no `README.md`;
 - Ler atentamente todo o enunciado deste trabalho antes de realizá-lo;
 - Consultar as referências adicionais e manuais sempre que necessário;
-- Tornar todo o código disponível em um repositório ou pasta compartilhada com instruções de compilação.
+- A entrega será no repositório gerado para o grupo no Classroom 50.
+- Tornar todo o código disponível no repositório, com instruções de reprodução dos experimentos realizados.
 
 ## 2. Objetivos da Prática
 

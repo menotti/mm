@@ -1,26 +1,29 @@
 # Trabalho Nº 5
 
-## uP1: gerando sinal de vídeo
+## VGA: gerando sinal de vídeo
 
 ## 1. Instruções Gerais
 
-- Grupos definidos no AVA;
+- Grupos definidos no AVA da disciplina;
 - Ler o documento sobre Normas para entrega dos Relatórios;
+	- Opcionalmente, o relatório pode ser escrito no `README.md`;
 - Ler atentamente todo o enunciado deste trabalho antes de realizá-lo;
 - Consultar as referências adicionais e manuais sempre que necessário;
-- Tornar todo o código disponível em um repositório ou pasta compartilhada com instruções de reprodução do experimento.
+- A entrega será no repositório gerado para o grupo no Classroom 50.
+- Tornar todo o código disponível no repositório, com instruções de reprodução dos experimentos realizados.
 
 ## 2. Objetivos da Prática
 
-- Familiarizar-se com linguagens de descrição de hardware, como Verilog [1, 2];
-- Conhecer o funcionamento do sinal de vídeo VGA [3, 4];
-- Projetar ou modificar um processador simples em Verilog [5, 6, 7, 8];
+- Familiarizar-se com linguagens de descrição de hardware, como Verilog;
+- Conhecer o funcionamento do sinal de vídeo VGA;
+- Projetar ou modificar um processador simples em Verilog;
 - Descrever as atividades gerais desenvolvidas no trabalho em um relatório.
 
 ## 3. Materiais e Equipamentos
 
-- Simulador EDA Playground (online);
-- Laboratório Remoto de Lógica Digital - DC/UFSCar (online).
+- VS Code no Linux ou usando [WSL](https://www.vlab.dc.ufscar.br/tutoriais/Sim/#wsl);
+- Simuladores online como o EDA Playground;
+- [Laboratório Remoto de Lógica Digital](https://legacy.vlab.dc.ufscar.br/camera.php) - DC/UFSCar (online).
 
 ## 4. Fundamentos teóricos
 
@@ -36,25 +39,25 @@ Na abordagem de software, adota-se um processador — um hardware de propósito 
 
 ### 4.2. Sinal de vídeo VGA
 
-VGA significa Matriz de Gráficos de Vídeo (*Video Graphics Array*) e refere-se especificamente ao hardware de exibição introduzido com o computador IBM PS/2, em 1987. Com sua adoção generalizada, o nome passou a se referir aos padrões de exibição de computador analógico (por exemplo, monitores CRT), ao conector DB-15 (comumente conhecido como conector VGA) ou à resolução de 640 × 480 usada neste trabalho [3].
+VGA significa Matriz de Gráficos de Vídeo (*Video Graphics Array*) e refere-se especificamente ao hardware de exibição introduzido com o computador IBM PS/2, em 1987. Com sua adoção generalizada, o nome passou a se referir aos padrões de exibição de computador analógico (por exemplo, monitores CRT), ao conector DB-15 (comumente conhecido como conector VGA) ou à resolução de 640 × 480 usada neste trabalho.
 
 ![Pinos de interesse no conector VGA (DB-15)](figs/vga-pinout.png)
 
-Figura 1: Pinos de interesse no conector VGA (DB-15) [3].
+Figura 1: Pinos de interesse no conector VGA (DB-15).
 
-Serão considerados apenas cinco dos 15 pinos, apresentados na Figura 1: Vermelho (*Red*), Verde (*Grn*), Azul (*Blue*), Sincronismo Horizontal (HS) e Sincronismo Vertical (VS). Red, Grn e Blue são três sinais analógicos que especificam a cor de um ponto na tela, enquanto HS e VS fornecem uma referência de posição para sua exibição. Gerando adequadamente esses cinco sinais de acordo com a especificação de temporização VGA, é possível exibir imagens em um monitor [3].
+Serão considerados apenas cinco dos 15 pinos, apresentados na Figura 1: Vermelho (*Red*), Verde (*Grn*), Azul (*Blue*), Sincronismo Horizontal (HS) e Sincronismo Vertical (VS). Red, Grn e Blue são três sinais analógicos que especificam a cor de um ponto na tela, enquanto HS e VS fornecem uma referência de posição para sua exibição. Gerando adequadamente esses cinco sinais de acordo com a especificação de temporização VGA, é possível exibir imagens em um monitor.
 
 Desenvolvido inicialmente para monitores CRT (tubos de raios catódicos), o padrão tem particularidades inerentes a esses monitores. Boa parte dos monitores LCD digitais também suporta o padrão VGA em diversas resoluções. A Figura 2 destaca as posições limítrofes para a resolução 640 × 480 que será gerada. Cada quadro inicia na posição 0,0 e segue na horizontal até concluir a linha. Um pulso em HS sinaliza o início da próxima linha, e assim sucessivamente. Ao final do quadro, um pulso em VS indica seu término e o início do próximo. Há intervalos específicos, que variam com a resolução, entre o último pixel da linha ou coluna e o pulso de sincronismo horizontal ou vertical.
 
 ![Posições dos pixels na imagem gerada](figs/vga-pixel-positions.png)
 
-Figura 2: Posição dos pixels na imagem gerada (adaptado de [3]).
+Figura 2: Posição dos pixels na imagem gerada.
 
 Na Figura 3 estão indicadas as faixas de temporização para a resolução 640 × 480, detalhadas na Tabela 1.
 
 ![Especificação de tempo para resolução 640 × 480 a 60 Hz](figs/vga-timing.png)
 
-Figura 3: Especificação de tempo para resolução de 640 × 480 a 60 Hz [3].
+Figura 3: Especificação de tempo para resolução de 640 × 480 a 60 Hz.
 
 | Descrição | Notação | Tempo | Largura/Frequência |
 |:---|:---:|---:|---:|
@@ -68,7 +71,7 @@ Figura 3: Especificação de tempo para resolução de 640 × 480 a 60 Hz [3].
 | V Front Porch | $t_{vfp}$ | 0,318 ms | 10 linhas |
 | V Address Video Time | $t_{vaddr}$ | 15,253 ms | 480 linhas |
 
-Tabela 1: Especificação de tempo para resolução de 640 × 480 a 60 Hz [3].
+Tabela 1: Especificação de tempo para resolução de 640 × 480 a 60 Hz.
 
 ### 4.3. Primeiro exemplo: hardware
 
@@ -138,6 +141,8 @@ assign VGA_B = inDisplayArea ? CounterY[7:4] : 4'b0000;
 Este exemplo mostra que gerar imagens de acordo com a posição dos pixels na tela é relativamente simples, pois não é necessário armazenar informações adicionais.
 
 ### 4.4. Segundo exemplo: *framebuffer*
+
+> Este exemplo está baseado no processador uP1, mas também pode ser desenvolvido usando um processador [RISC-V](https://github.com/menotti/lightriscv) que contém muito mais recursos e ferramentas disponíveis. 
 
 Um *framebuffer* é uma porção de memória usada para armazenar uma imagem. No segundo exemplo, essa técnica é usada com o uP1, ou seja, em uma abordagem por software. A memória foi modificada e agora possui portas adicionais de endereço (`vaddr`) e dados (`vdata`). Na resolução máxima e com a profundidade de cores adotada, seriam necessários 1,2 MB de memória, sem alinhamento. Além do espaço insuficiente, isso complicaria o acesso, pois dois canais de cor (4 bits) ficariam em uma palavra e o terceiro canal na palavra seguinte, misturado com o pixel seguinte.
 
@@ -277,18 +282,19 @@ Para a realização deste trabalho, o grupo deverá implementar obrigatoriamente
 2. **(obrigatório)** Usando o uP1 atual, implementar uma animação significativamente diferente daquela fornecida. Por exemplo, deslocar uma imagem inteira na tela;
 3. Adaptar uma implementação do algoritmo de Mandelbrot para rodar no hardware. Será necessário usar uma biblioteca de ponto flutuante ou gerar *IP cores* no Vivado;
 4. Modificar o adaptador de vídeo atual do uP1 para funcionar com um mapa de caracteres (modo texto). Nesse caso, uma ROM é usada para armazenar o mapa e a memória de vídeo armazena qual caractere está em cada posição;
-5. Implementar ou adaptar o processador IAS [7], SAP-1 [8] ou outro qualquer [6] para funcionar com o adaptador de vídeo fornecido ou modificado;
+5. Implementar ou adaptar o processador IAS, SAP-1 ou outro qualquer para funcionar com o adaptador de vídeo fornecido ou modificado;
 6. Modificar o *framebuffer* para usar a resolução 20 × 15 (com “pixel virtual” de 32 × 32) e executar o programa do item 2. Será necessário aumentar o tamanho da memória e o conjunto de instruções;
 7. Implementar uma animação com funções trigonométricas usando software e/ou hardware;
 8. Implementar um jogo simples usando software e/ou hardware.
 
 ## Referências Bibliográficas
 
-- [1] [Playlist sobre Verilog](https://www.youtube.com/playlist?list=PLhaFCmjMNuYZjAdJtC2WfDeHgR3daM9Tm)
-- [2] [Verilog Tutorial](http://asic-world.com/verilog/)
-- [3] [VGA Display Controller](https://reference.digilentinc.com/learn/programmable-logic/tutorials/vga-display-congroller/start)
-- [4] [Pmod VGA Reference Manual](https://reference.digilentinc.com/pmod/pmodvga/reference-manual)
-- [5] [uP1](https://github.com/menotti/up1/)
-- [6] [Simple microprocessor using Verilog](https://stackoverflow.com/questions/51592244/implementation-of-simple-microprocessor-using-verilog)
-- [7] IAS: instruções e simulador.
-- [8] SAP-1: instruções e simulador.
+- [Playlist sobre Verilog](https://www.youtube.com/playlist?list=PLhaFCmjMNuYZjAdJtC2WfDeHgR3daM9Tm)
+- [Verilog Tutorial](http://asic-world.com/verilog/)
+- [VGA Display Controller](https://reference.digilentinc.com/learn/programmable-logic/tutorials/vga-display-congroller/start)
+- [Pmod VGA Reference Manual](https://reference.digilentinc.com/pmod/pmodvga/reference-manual)
+- [LightRISCV](https://github.com/menotti/lightriscv)
+- [uP1](https://github.com/menotti/up1/)
+- [Simple microprocessor using Verilog](https://stackoverflow.com/questions/51592244/implementation-of-simple-microprocessor-using-verilog)
+- [IAS: instruções e simulador](https://www.ic.unicamp.br/~edson/disciplinas/mc404/2017-2s/abef/IAS-sim/)
+- [SAP-1: instruções e simulador](https://embarcados.com.br/projeto-do-sap-1-construido-no-simulador/)
