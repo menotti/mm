@@ -279,13 +279,20 @@ Figura 5: Sinal de vídeo VGA gerado via hardware e software.
 Para a realização deste trabalho, o grupo deverá implementar obrigatoriamente no mínimo três configurações diferentes de hardware e/ou software e testá-las no laboratório virtual. As duas primeiras implementações serão realizadas por todos os grupos. A terceira pode ser escolhida livremente a partir do número 3 da lista a seguir e deverá ser informada com antecedência no fórum de dúvidas da disciplina. Cada grupo deverá escolher uma opção diferente:
 
 1. **(obrigatório)** Modificar o exemplo de hardware para gerar uma imagem que não seja baseada apenas nos contadores X e Y. Pode-se usar, por exemplo, uma função simples desses contadores;
-2. **(obrigatório)** Usando o uP1 atual, implementar uma animação significativamente diferente daquela fornecida. Por exemplo, deslocar uma imagem inteira na tela;
+2. **(obrigatório)** Usando o uP1 atual ou RISC-V, implementar uma animação significativamente diferente daquela fornecida. Por exemplo, deslocar uma imagem inteira na tela;
 3. Adaptar uma implementação do algoritmo de Mandelbrot para rodar no hardware. Será necessário usar uma biblioteca de ponto flutuante ou gerar *IP cores* no Vivado;
 4. Modificar o adaptador de vídeo atual do uP1 para funcionar com um mapa de caracteres (modo texto). Nesse caso, uma ROM é usada para armazenar o mapa e a memória de vídeo armazena qual caractere está em cada posição;
 5. Implementar ou adaptar o processador IAS, SAP-1 ou outro qualquer para funcionar com o adaptador de vídeo fornecido ou modificado;
 6. Modificar o *framebuffer* para usar a resolução 20 × 15 (com “pixel virtual” de 32 × 32) e executar o programa do item 2. Será necessário aumentar o tamanho da memória e o conjunto de instruções;
 7. Implementar uma animação com funções trigonométricas usando software e/ou hardware;
 8. Implementar um jogo simples usando software e/ou hardware.
+9. Plotar uma imagem vetorial usando software e/ou hardware.
+10. Usar a "quarta parte" do RGB para criar efeitos de BIA (blink, intensity, alpha).
+11. Implementar um relógio e/ou cronômetro.
+12. Implementar um jogo usando o conceito de sprite.
+13. Implementar um leitor/gerador de Código Morse.
+14. Implementar um gerador de código de barras ou QR.
+15. Implementar um gerador de imagens 3D.  
 
 ## Referências Bibliográficas
 
