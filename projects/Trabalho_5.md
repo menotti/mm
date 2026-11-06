@@ -9,7 +9,7 @@
 	- Opcionalmente, o relatório pode ser escrito no `README.md`;
 - Ler atentamente todo o enunciado deste trabalho antes de realizá-lo;
 - Consultar as referências adicionais e manuais sempre que necessário;
-- A entrega será no repositório gerado para o grupo no Classroom 50.
+- A entrega será no repositório gerado para o grupo no Classroom 50;
 - Tornar todo o código disponível no repositório, com instruções de reprodução dos experimentos realizados.
 
 ## 2. Objetivos da Prática
