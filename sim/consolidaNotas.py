@@ -97,8 +97,8 @@ else:
                     how='left'
                 )
 
-                # Adicionar a nota bruta da atividade e escalar de 0-10 para 0-100
-                df_merged_activity[new_score_col_name] = df_merged_activity[score_col_activity].fillna(0) * 10
+                # Adicionar a nota bruta da atividade e escalar de 0-10 para 0-100 (opcional, dependendo da configuração do curso)
+                df_merged_activity[new_score_col_name] = df_merged_activity[score_col_activity].fillna(0) * 1
 
                 # Mesclar as notas brutas com o dataframe principal de notas usando o email
                 df_grades = pd.merge(
